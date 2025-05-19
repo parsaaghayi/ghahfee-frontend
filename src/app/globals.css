@@ -1,6 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+}
 
 @font-face {
   font-family: "Mikhak";
@@ -23,7 +29,62 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/assets/fonts/iransans/iransans.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IRANSans';
+  src: url('/assets/fonts/iransans/iransans.woff') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   direction: rtl;
   font-family: "Mikhak", Tahoma, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.slider-scrollbar::-webkit-scrollbar {
+  height: 8px;
+  background: transparent;
+}
+.slider-scrollbar::-webkit-scrollbar-thumb {
+  background: #b5e0d6;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.slider-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1e5d4e;
+}
+
+.slider-scrollbar {
+  scrollbar-color: #b5e0d6 transparent;
+  scrollbar-width: thin;
+}
+
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
+    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
+    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'IRANSans', Arial, sans-serif;
 }

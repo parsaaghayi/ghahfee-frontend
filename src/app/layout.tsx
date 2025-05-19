@@ -1,9 +1,16 @@
 import "./globals.css";
+import { ReactNode } from 'react';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: ReactNode;
+}) {
   return (
     <html lang="fa" dir="rtl">
-      <body className="font-mikhak bg-white text-gray-900">{children}</body>
+      <body className={`antialiased`}>
+        {children}
+      </body>
     </html>
   );
-} 
+}
