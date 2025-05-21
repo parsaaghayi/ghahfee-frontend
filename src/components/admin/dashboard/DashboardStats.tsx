@@ -70,7 +70,7 @@ export default function DashboardStats() {
           <div className={`p-3 rounded-lg ${card.color}`}>
             <card.icon className="h-6 w-6" />
           </div>
-          <div className="mr-4">
+          <div className="ms-4">
             <h3 className="text-sm font-medium text-gray-500">{card.title}</h3>
             <p className="text-2xl font-semibold text-gray-900">{card.value}</p>
           </div>

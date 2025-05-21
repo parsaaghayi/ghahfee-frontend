@@ -169,7 +169,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                     }`}
                   >
                     <div className="flex items-center">
-                      <item.icon className="h-5 w-5 ml-3" />
+                      <item.icon className="h-5 w-5 me-3" />
                       {!isCollapsed && <span>{item.title}</span>}
                     </div>
                     {!isCollapsed && (
@@ -186,7 +186,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                         openSubmenu === item.title ? 'max-h-[500px]' : 'max-h-0'
                       }`}
                     >
-                      <ul className="mt-2 mr-6 space-y-1">
+                      <ul className="mt-2 ms-6 space-y-1">
                         {item.submenu.map((subItem) => (
                           <li key={subItem.title}>
                             {subItem.submenu ? (
@@ -198,7 +198,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                                   }`}
                                 >
                                   <div className="flex items-center">
-                                    <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center ml-2">
+                                    <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center me-2">
                                       <subItem.icon className="h-4 w-4" />
                                     </div>
                                     <span>{subItem.title}</span>
@@ -214,7 +214,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                                     openSubSubmenu === subItem.title ? 'max-h-[500px]' : 'max-h-0'
                                   }`}
                                 >
-                                  <ul className="mt-2 mr-6 space-y-1">
+                                  <ul className="mt-2 ms-6 space-y-1">
                                     {subItem.submenu.map((subSubItem) => (
                                       <li key={subSubItem.title}>
                                         <Link
@@ -223,7 +223,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                                             pathname === subSubItem.href ? 'bg-gray-100' : ''
                                           }`}
                                         >
-                                          <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center ml-2">
+                                          <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center me-2">
                                             <subSubItem.icon className="h-4 w-4" />
                                           </div>
                                           {subSubItem.title}
@@ -240,7 +240,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                                   pathname === subItem.href ? 'bg-gray-100' : ''
                                 }`}
                               >
-                                <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center ml-2">
+                                <div className="w-6 h-6 rounded-full bg-gray-100 flex items-center justify-center me-2">
                                   <subItem.icon className="h-4 w-4" />
                                 </div>
                                 {subItem.title}
@@ -259,7 +259,7 @@ export default function AdminSidebar({ isCollapsed, setIsCollapsed }: AdminSideb
                     pathname === item.href ? 'bg-gray-100' : ''
                   }`}
                 >
-                  <item.icon className="h-5 w-5 ml-3" />
+                  <item.icon className="h-5 w-5 me-3" />
                   {!isCollapsed && <span>{item.title}</span>}
                 </Link>
               )}

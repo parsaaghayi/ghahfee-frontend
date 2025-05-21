@@ -72,7 +72,7 @@ export default function TopProducts() {
                     className="rounded-lg object-cover"
                   />
                 </div>
-                <div className="mr-4 flex-1">
+                <div className="ms-4 flex-1">
                   <Link
                     href={`/admin/products/${product.id}`}
                     className="text-sm font-medium text-gray-900 hover:text-blue-600"
@@ -103,4 +103,4 @@ export default function TopProducts() {
       </div>
     </div>
   );
-} 
+}

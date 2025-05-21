@@ -105,7 +105,7 @@ export default function RecentOrders() {
                     سفارش #{order.order_number} <span className="text-xs text-gray-400">(شناسه: {order.id})</span>
                   </p>
                   <p className="text-xs text-gray-500 mt-1 flex flex-wrap items-center gap-1">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-200 text-gray-600 font-bold text-xs mr-2">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-200 text-gray-600 font-bold text-xs ms-2">
                       {order.user?.avatar ? (
                         <Image
                           src={order.user.avatar}
