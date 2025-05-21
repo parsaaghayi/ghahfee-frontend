@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { format } from 'date-fns-jalali';
+import Image from 'next/image';
 
 interface Order {
   id: number;
@@ -14,6 +15,7 @@ interface Order {
     name: string;
     phone?: string;
     addresses?: { city?: string }[];
+    avatar?: string;
   };
 }
 
@@ -103,6 +105,19 @@ export default function RecentOrders() {
                     سفارش #{order.order_number} <span className="text-xs text-gray-400">(شناسه: {order.id})</span>
                   </p>
                   <p className="text-xs text-gray-500 mt-1 flex flex-wrap items-center gap-1">
+                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-gray-200 text-gray-600 font-bold text-xs mr-2">
+                      {order.user?.avatar ? (
+                        <Image
+                          src={order.user.avatar}
+                          alt={order.user.name || 'آواتار'}
+                          width={24}
+                          height={24}
+                          className="rounded-full object-cover"
+                        />
+                      ) : (
+                        order.user?.name?.[0] || '-'
+                      )}
+                    </span>
                     {order.user?.name || '-'}
                     {order.user?.phone && <span className="mx-1"> - </span>}
                     {order.user?.phone && `${order.user.phone}`}
