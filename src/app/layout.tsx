@@ -1,14 +1,19 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import { ReactNode } from 'react';
+
+export const metadata: Metadata = {
+  title: "قهوه",
+  description: "فروشگاه قهوه",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode;
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={`antialiased`}>
+    <html lang="fa" dir="rtl" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         {children}
       </body>
     </html>

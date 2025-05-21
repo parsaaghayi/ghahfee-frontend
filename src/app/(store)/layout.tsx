@@ -27,7 +27,7 @@ export default async function StoreLayout({ children }: { children: React.ReactN
   const menus = await getMenusSSR();
   const notifications = await getNotificationsSSR();
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white to-gray-50 font-mikhak">
       <NotificationSlider notifications={notifications} />
       <StoreHeader menus={menus} />
       <main>{children}</main>

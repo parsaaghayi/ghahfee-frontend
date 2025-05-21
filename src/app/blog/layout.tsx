@@ -1,3 +1,3 @@
 export default function BlogLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return <div className="font-mikhak">{children}</div>;
 } 

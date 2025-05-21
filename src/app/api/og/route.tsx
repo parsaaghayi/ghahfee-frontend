@@ -34,7 +34,7 @@ export async function GET(request: Request) {
             alignItems: "center",
             justifyContent: "center",
             textTransform: "capitalize",
-            fontFamily: "Tahomoa , sans-serif", // اضافه شد
+            fontFamily: "Tahomoa",
           }}
         >
           {text}
