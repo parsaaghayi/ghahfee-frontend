@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import CategoriesList from "@/components/admin/products/CategoriesList";
+import CategoriesList from "@/components/admin/shop/products/CategoriesList";
 
 export const metadata: Metadata = {
   title: "مدیریت دسته‌بندی‌ها | پنل مدیریت",

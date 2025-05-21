@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import TagsList from "@/components/admin/products/TagsList";
+import TagsList from "@/components/admin/shop/products/TagsList";
 
 export const metadata: Metadata = {
   title: "مدیریت برچسب‌ها | پنل مدیریت",

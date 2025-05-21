@@ -11,7 +11,7 @@ interface AdminLayoutProps {
 export default function AdminLayout({ children }: AdminLayoutProps) {
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   return (
-    <div className="flex h-screen bg-gray-100 overflow-x-hidden scrollbar-gutter-stable">
+    <div className="flex h-screen bg-gray-100 overflow-x-hidden scrollbar-gutter-stable font-iransans">
       <AdminSidebar isCollapsed={isSidebarCollapsed} setIsCollapsed={setIsSidebarCollapsed} />
       <div className={`flex-1 flex flex-col overflow-hidden transition-all duration-300 ${isSidebarCollapsed ? 'ms-20' : 'ms-64'}`}>
         <AdminHeader />

@@ -71,3 +71,7 @@ a {
   scrollbar-color: #b5e0d6 transparent;
   scrollbar-width: thin;
 }
+
+button {
+  cursor: pointer;
+}
